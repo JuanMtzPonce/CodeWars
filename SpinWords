@@ -1,0 +1,33 @@
+public class SpinWords {
+
+  public String spinWords(String sentence) {
+    
+    String sText = "";
+    
+    String[]sArray = sentence.split(" ");
+     
+    for (int i=0;i<sArray.length;i++){
+      
+      if (sArray[i].length()<5){
+         sText += sArray[i];        
+      }
+      
+      else{
+        
+        for (int j=0;j<sArray[i].length();j++){
+           sText += sArray[i].charAt(sArray[i].length()-1-j);
+        }
+        
+      }
+      
+      if (i<(sArray.length-1)){
+        sText+= " ";
+      }
+      
+      
+    }
+    
+    return sText;
+    
+  }
+}
