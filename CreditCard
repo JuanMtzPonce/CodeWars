@@ -1,0 +1,19 @@
+def CreditCardVerif (nNumber):
+
+    sString = str(nNumber)
+    aNArray = [eval(i) for i in list(sString)]
+    nSum = 0
+
+    for i in range(0, len(aNArray)):
+
+        if ((i%2)==1):
+            nTemp = aNArray[len(aNArray)-1-i]*2
+
+            if (nTemp>9):
+                nTemp-=9
+
+            aNArray[len(aNArray) - 1 - i] = nTemp
+
+        nSum+=aNArray[len(aNArray) - 1 - i]
+
+    return ((nSum%10)==0)
