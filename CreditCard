@@ -1,4 +1,4 @@
-def CreditCardVerif (nNumber):
+def CreditCard(nNumber):
 
     sString = str(nNumber)
     aNArray = [eval(i) for i in list(sString)]
